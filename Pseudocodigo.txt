@@ -40,7 +40,7 @@ Inicio
 
 		centro = (inicio + final)/2 //para obtener el centro de la lista
 		
-		valorCentral = sera el centro de la lista obtenido por el resultado del centro
+		valorCentral = es el valor que esta dentro de la posicion del centro
 
 		imprimir (comparar el numeroRandom con el valorCentral)
 

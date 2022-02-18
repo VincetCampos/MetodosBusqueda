@@ -7,7 +7,7 @@ public class MetodosBusqueda {
     static List<Integer> listEnteros;
 
     //Se crea un numero aleatorio entre 1 y 10
-    static int numeroRandom = (int)(Math.random()*10+1);
+    static int numeroRandom = (int)(Math.random()*10+1);;
 
     public static void main(String[] args) {
         //Se crea el listado de numeros del 1 al 10
@@ -26,29 +26,30 @@ public class MetodosBusqueda {
 
         System.out.println("Metodo de busqueda Lineal");
         metodoLineal();
+        System.out.println("------------------------------");
         System.out.println("Metodo de busqueda binaria");
         metodoBinario();
 
     }
     public static void metodoLineal(){
-        long startTime = System.nanoTime();
+        //long startTime = System.nanoTime();
         //Se busca un numero de la lista y se compara con el numero aleatorio
         //Si es igual se imprime el numero
-        for (int listado : listEnteros) {
-            if (listado == numeroRandom){
-                System.out.println("El numero seleccionado es : " + listado);
+        for (int numeroLista : listEnteros) {
+            if (numeroLista == numeroRandom){
+                System.out.println("El numero seleccionado es : " + numeroLista);
             }
         }
-        long time = System.nanoTime() - startTime;
-        System.out.println("Tiempo: "+time+" Nanoseg...\n");
+        //long time = System.nanoTime() - startTime;
+        ///System.out.println("Tiempo: "+time+" Nanoseg...\n");
     }
 
     public static void metodoBinario(){
 
-        long startTime = System.nanoTime();
+        //long startTime = System.nanoTime();
 
         //Se declaran las variables y se definen
-        int primero, centro, ultimo, valorCentro;
+        int primero, centro, ultimo, valorCentral;
 
         primero= 0;
 
@@ -58,24 +59,22 @@ public class MetodosBusqueda {
             //se busca el centro de la lista
             centro = (primero + ultimo)/2;
 
-            valorCentro = listEnteros.get(centro);
+            valorCentral = listEnteros.get(centro);
             //System.out.println(valorCentro);
 
-            System.out.println("Comparando " + numeroRandom + " y " + valorCentro);
+            System.out.println("Comparando " + numeroRandom + " y " + valorCentral);
 
-            if (numeroRandom == valorCentro){
-                System.out.println("El numero seleccionado esta en la posicion: " + centro);
-                System.out.println("El numero es: " + listEnteros.get(centro));
-
+            if (numeroRandom == valorCentral){
+                System.out.println("El numero seleccionado es: " + valorCentral);
                 break;
             }
-            else if (numeroRandom < valorCentro){
+            else if (numeroRandom < valorCentral){
                 ultimo = centro - 1;
             }else{
                 primero = centro + 1;
             }
         }
-        long time = System.nanoTime() - startTime;
-        System.out.println("Tiempo: "+time+" Nanoseg...\n");
+        //long time = System.nanoTime() - startTime;
+        //System.out.println("Tiempo: "+time+" Nanoseg...\n");
     }
 }

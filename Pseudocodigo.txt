@@ -1,0 +1,67 @@
+Inicio
+	
+	//Crear lista y se añade los valores a la lista
+
+	Lista de enteros : ListaEnteros
+	
+	Añadir a ListaEnteros(1)
+	Añadir a ListaEnteros(2)
+	Añadir a ListaEnteros(3)
+	Añadir a ListaEnteros(4)
+	Añadir a ListaEnteros(5)
+	Añadir a ListaEnteros(6)
+	Añadir a ListaEnteros(7)
+	Añadir a ListaEnteros(8)
+	Añadir a ListaEnteros(9)
+	Añadir a ListaEnteros(10)
+
+	//Se crea un numero aleatorio
+	numeroRandom = un numero entre 1 y 10
+
+	//Metodo de busqueda lineal
+	
+	MetodoLineal(){
+	for each (una variable llamada numeroLista obtendra los valores de la lista)
+	
+		si (numeroLista == numeroRandom)
+			imprimir(El numero seleccionado es: + numeroLista)
+	}
+
+	//Metodo de busqueda binario
+	
+	MetodoBinario(){	
+	//Se crean variables de enteros
+	varables de enteros inicio, centro, final, valorCentral
+
+	inicio = 0 //inicio de la lista
+	final = el tamaño de la lista - 1
+
+	repetir mientras(sea verdadero)
+
+		centro = (inicio + final)/2 //para obtener el centro de la lista
+		
+		valorCentral = sera el centro de la lista obtenido por el resultado del centro
+
+		imprimir (comparar el numeroRandom con el valorCentral)
+
+		si(numeroRandom == valorCentral)
+
+			imprimir(El numero seleccionado es el: + valorCentral)
+			Romper el ciclo			
+
+		sino si(numeroRandom<valorCentral)
+			final = centro - 1 //Para dirigirse hacia la izquierda de la lista	
+
+		sino
+			inicio = centro + 1 //Para dirigirse hacia la derecha de la lista
+	}
+
+	imprimir(metodo de busqueda lineal)
+	metodoLineal()
+
+	imprimir(----------------------------)
+
+	imprimir(metodo de busqueda binario)
+	metodoBinario()
+
+Final

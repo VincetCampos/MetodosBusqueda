@@ -24,6 +24,8 @@ public class MetodosBusqueda {
         listEnteros.add(9);
         listEnteros.add(10);
 
+        System.out.println("El numero aletorio es " + numeroRandom);
+        System.out.println("------------------------------");
         System.out.println("Metodo de busqueda Lineal");
         metodoLineal();
         System.out.println("------------------------------");
